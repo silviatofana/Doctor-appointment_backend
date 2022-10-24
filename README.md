@@ -1,6 +1,6 @@
 ![](https://img.shields.io/badge/Microverse-blueviolet)
 
-# Hello-Rails_back-end
+# Doctors Appointment Backend
 
 > This web application is the API that serves as the backend to the [Hello-react-front-end](https://github.com/Chrissiku/hello-react-front-end.git)
 
@@ -66,6 +66,13 @@ rspec
 - GitHub: [@githubhandle](https://github.com/silviatofana)
 - Twitter: [@twitterhandle](https://twitter.com/silviatofana)
 - LinkedIn: [LinkedIn](https://www.linkedin.com/in/silviatofana/)
+
+
+👤 **Felix Ouma**
+
+- GitHub: [@Felix45](https://github.com/Felix45)
+- Twitter: [@Felix_Atonoh](https://twitter.com/Felix_Atonoh)
+- LinkedIn: [LinkedIn](https://www.linkedin.com/in/felix-ouma/)
 
 
 ## 🤝 Contributing

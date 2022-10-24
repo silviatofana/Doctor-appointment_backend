@@ -4,7 +4,7 @@ class Api::V1::AppointmentsController < ApplicationController
 
   # GET /appointments
   def index
-    @appointments = Appointment.all
+    @appointments = Doctor.find(params[:doctor_id]).appointments.all
 
     render json: @appointments
   end
@@ -16,7 +16,7 @@ class Api::V1::AppointmentsController < ApplicationController
 
   # POST /appointments
   def create
-    @appointment = Appointment.new(appointment_params)
+    @appointment = @current_user.appointments.new(appointment_params)
 
     if @appointment.save
       render json: @appointment, status: :created
@@ -36,7 +36,8 @@ class Api::V1::AppointmentsController < ApplicationController
 
   # DELETE /appointments/1
   def destroy
-    @appointment.destroy
+    @current_user.appointments.destroy(params[:id])
+    render json: @current_user.appointments.all
   end
 
   private
@@ -48,7 +49,7 @@ class Api::V1::AppointmentsController < ApplicationController
 
   # Only allow a list of trusted parameters through.
   def appointment_params
-    params.require(:appointment).permit(:date_of_appointment, :time_of_appointment, :user_id, :doctor_id,
+    params.require(:appointment).permit(:date_of_appointment, :time_of_appointment, :doctor_id,
                                         :description)
   end
 end

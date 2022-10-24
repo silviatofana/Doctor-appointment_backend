@@ -68,6 +68,13 @@ rspec
 - LinkedIn: [LinkedIn](https://www.linkedin.com/in/silviatofana/)
 
 
+👤 **Felix Ouma**
+
+- GitHub: [@Felix45](https://github.com/Felix45)
+- Twitter: [@Felix_Atonoh](https://twitter.com/Felix_Atonoh)
+- LinkedIn: [LinkedIn](https://www.linkedin.com/in/felix-ouma/)
+
+
 ## 🤝 Contributing
 
 Contributions, issues, and feature requests are welcome!

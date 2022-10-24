@@ -1,6 +1,6 @@
 ![](https://img.shields.io/badge/Microverse-blueviolet)
 
-# Hello-Rails_back-end
+# Doctors Appointment Backend
 
 > This web application is the API that serves as the backend to the [Hello-react-front-end](https://github.com/Chrissiku/hello-react-front-end.git)
 

@@ -23,6 +23,7 @@ gem 'puma', '~> 5.0'
 
 # Use Active Model has_secure_password [https://guides.rubyonrails.org/active_model_basics.html#securepassword]
 gem 'bcrypt', '~> 3.1.7'
+gem 'rspec-rails'
 
 # Add gem devise for user authentication
 gem 'devise'

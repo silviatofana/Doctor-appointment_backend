@@ -36,6 +36,8 @@ class Api::V1::UsersController < ApplicationController
   # DELETE /users/1
   def destroy
     @user.destroy
+    @users = User.all
+    render json: @users
   end
 
   private

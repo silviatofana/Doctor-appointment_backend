@@ -37,6 +37,7 @@ class Api::V1::DoctorsController < ApplicationController
   # DELETE /doctors/1
   def destroy
     @doctor.destroy
+    render json: Doctor.all
   end
 
   private

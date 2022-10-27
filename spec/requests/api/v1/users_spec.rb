@@ -42,6 +42,7 @@ RSpec.describe 'api/v1/users', type: :request do
     end
   end
 
+
   path '/api/v1/users/{id}' do
     # You'll want to customize the parameter types...
     parameter name: 'id', in: :path, type: :string, description: 'id'
@@ -145,6 +146,32 @@ RSpec.describe 'api/v1/users', type: :request do
             password_confirmation: { type: :string }
           },
           required: %w[name email password password_confirmation]
+        }
+
+        after do |example|
+          example.metadata[:response][:content] = {
+            'application/json' => {
+              example: JSON.parse(response.body, symbolize_names: true)
+            }
+          }
+        end
+        run_test!
+      end
+    end
+  end
+
+  path '/auth/login' do
+    post('login user') do
+      response(200, 'successful') do
+        consumes 'application/json'
+
+        parameter name: :user, in: :body, schema: {
+          type: :object,
+          properties: {
+            email: { type: :string },
+            password: { type: :string },
+          },
+          required: %w[email password]
         }
 
         after do |example|

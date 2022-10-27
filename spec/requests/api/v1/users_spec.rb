@@ -42,7 +42,6 @@ RSpec.describe 'api/v1/users', type: :request do
     end
   end
 
-
   path '/api/v1/users/{id}' do
     # You'll want to customize the parameter types...
     parameter name: 'id', in: :path, type: :string, description: 'id'
@@ -169,7 +168,7 @@ RSpec.describe 'api/v1/users', type: :request do
           type: :object,
           properties: {
             email: { type: :string },
-            password: { type: :string },
+            password: { type: :string }
           },
           required: %w[email password]
         }

@@ -1,7 +1,6 @@
 require 'swagger_helper'
 
 RSpec.describe 'api/v1/appointments', type: :request do
-
   path '/api/v1/doctors/{doctor_id}/appointments' do
     # You'll want to customize the parameter types...
     parameter name: 'doctor_id', in: :path, type: :string, description: 'doctor_id'
@@ -23,12 +22,12 @@ RSpec.describe 'api/v1/appointments', type: :request do
 
     post('create appointment') do
       parameter({
-      in: :header,
-      type: :string,
-      name: :Authorization,
-      required: true,
-      description: 'Client token'
-    })
+                  in: :header,
+                  type: :string,
+                  name: :Authorization,
+                  required: true,
+                  description: 'Client token'
+                })
       response(200, 'successful') do
         security [Authorization: {}]
         let(:Authorization) { "Authorization #{generate_token}" }
@@ -81,12 +80,12 @@ RSpec.describe 'api/v1/appointments', type: :request do
 
     patch('update appointment') do
       parameter({
-      in: :header,
-      type: :string,
-      name: :Authorization,
-      required: true,
-      description: 'Client token'
-    })
+                  in: :header,
+                  type: :string,
+                  name: :Authorization,
+                  required: true,
+                  description: 'Client token'
+                })
       response(200, 'successful') do
         security [Authorization: {}]
         let(:Authorization) { "Authorization #{generate_token}" }
@@ -104,7 +103,6 @@ RSpec.describe 'api/v1/appointments', type: :request do
           required: %w[date_of_appointment time_of_appointment description user_id doctor_id]
         }
 
-
         after do |example|
           example.metadata[:response][:content] = {
             'application/json' => {
@@ -118,12 +116,12 @@ RSpec.describe 'api/v1/appointments', type: :request do
 
     put('update appointment') do
       parameter({
-      in: :header,
-      type: :string,
-      name: :Authorization,
-      required: true,
-      description: 'Client token'
-    })
+                  in: :header,
+                  type: :string,
+                  name: :Authorization,
+                  required: true,
+                  description: 'Client token'
+                })
       response(200, 'successful') do
         security [Authorization: {}]
         let(:Authorization) { "Authorization #{generate_token}" }
@@ -155,19 +153,19 @@ RSpec.describe 'api/v1/appointments', type: :request do
 
     delete('delete appointment') do
       parameter({
-      in: :header,
-      type: :string,
-      name: :Authorization,
-      required: true,
-      description: 'Client token'
-    })
-    
+                  in: :header,
+                  type: :string,
+                  name: :Authorization,
+                  required: true,
+                  description: 'Client token'
+                })
+
       response(200, 'successful') do
         security [Authorization: {}]
         let(:Authorization) { "Authorization #{generate_token}" }
         let(:doctor_id) { '123' }
         let(:id) { '123' }
-       
+
         after do |example|
           example.metadata[:response][:content] = {
             'application/json' => {

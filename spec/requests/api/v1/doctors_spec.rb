@@ -1,11 +1,9 @@
 require 'swagger_helper'
 
 RSpec.describe 'api/v1/doctors', type: :request do
-
   path '/api/v1/doctors' do
     get('list doctors') do
       response(200, 'successful') do
-
         after do |example|
           example.metadata[:response][:content] = {
             'application/json' => {
@@ -19,18 +17,17 @@ RSpec.describe 'api/v1/doctors', type: :request do
 
     post('create doctor') do
       parameter({
-      in: :header,
-      type: :string,
-      name: :Authorization,
-      required: true,
-      description: 'Client token'
-    })
-  
+                  in: :header,
+                  type: :string,
+                  name: :Authorization,
+                  required: true,
+                  description: 'Client token'
+                })
+
       response(200, 'successful') do
         consumes 'application/json'
         security [Authorization: {}]
         let(:Authorization) { "Authorization #{generate_token}" }
-
 
         parameter name: :doctor, in: :body, schema: {
           type: :object,
@@ -75,12 +72,12 @@ RSpec.describe 'api/v1/doctors', type: :request do
 
     patch('update doctor') do
       parameter({
-      in: :header,
-      type: :string,
-      name: :Authorization,
-      required: true,
-      description: 'Client token'
-    })
+                  in: :header,
+                  type: :string,
+                  name: :Authorization,
+                  required: true,
+                  description: 'Client token'
+                })
       response(200, 'successful') do
         security [Authorization: {}]
         let(:Authorization) { "Authorization #{generate_token}" }
@@ -109,12 +106,12 @@ RSpec.describe 'api/v1/doctors', type: :request do
 
     put('update doctor') do
       parameter({
-      in: :header,
-      type: :string,
-      name: :Authorization,
-      required: true,
-      description: 'Client token'
-    })
+                  in: :header,
+                  type: :string,
+                  name: :Authorization,
+                  required: true,
+                  description: 'Client token'
+                })
       response(200, 'successful') do
         security [Authorization: {}]
         let(:Authorization) { "Authorization #{generate_token}" }
@@ -142,17 +139,17 @@ RSpec.describe 'api/v1/doctors', type: :request do
 
     delete('delete doctor') do
       parameter({
-      in: :header,
-      type: :string,
-      name: :Authorization,
-      required: true,
-      description: 'Client token'
-    })
+                  in: :header,
+                  type: :string,
+                  name: :Authorization,
+                  required: true,
+                  description: 'Client token'
+                })
       response(200, 'successful') do
         security [Authorization: {}]
         let(:Authorization) { "Authorization #{generate_token}" }
 
-        let(:id) { '123' } 
+        let(:id) { '123' }
 
         after do |example|
           example.metadata[:response][:content] = {

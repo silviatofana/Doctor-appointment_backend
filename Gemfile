@@ -30,6 +30,7 @@ gem 'devise'
 
 # Add jwt for token based authentication of the api
 gem 'jwt'
+gem 'rswag'
 
 # Add cancancan authorization gem
 gem 'cancancan', '~> 3.3'

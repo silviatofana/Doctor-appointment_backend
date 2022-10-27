@@ -4,6 +4,150 @@ info:
   title: API V1
   version: v1
 paths:
+  "/api/v1/doctors/{doctor_id}/appointments":
+    parameters:
+    - name: doctor_id
+      in: path
+      type: string
+      description: doctor_id
+      required: true
+    get:
+      summary: list appointments
+      responses:
+        '200':
+          description: successful
+    post:
+      summary: create appointment
+      parameters:
+      - in: header
+        type: string
+        name: Authorization
+        required: true
+        description: Client token
+      - name: appointment
+        in: body
+        schema:
+          type: object
+          properties:
+            date_of_appointment:
+              type: string
+            time_of_appointment:
+              type: string
+            description:
+              type: string
+            user_id:
+              type: string
+            doctor_id:
+              type: string
+          required:
+          - date_of_appointment
+          - time_of_appointment
+          - description
+          - user_id
+          - doctor_id
+      security:
+      - Authorization: {}
+      responses:
+        '200':
+          description: successful
+  "/api/v1/doctors/{doctor_id}/appointments/{id}":
+    parameters:
+    - name: doctor_id
+      in: path
+      type: string
+      description: doctor_id
+      required: true
+    - name: id
+      in: path
+      type: string
+      description: id
+      required: true
+    get:
+      summary: show appointment
+      responses:
+        '200':
+          description: successful
+    patch:
+      summary: update appointment
+      parameters:
+      - in: header
+        type: string
+        name: Authorization
+        required: true
+        description: Client token
+      - name: appointment
+        in: body
+        schema:
+          type: object
+          properties:
+            date_of_appointment:
+              type: string
+            time_of_appointment:
+              type: string
+            description:
+              type: string
+            user_id:
+              type: string
+            doctor_id:
+              type: string
+          required:
+          - date_of_appointment
+          - time_of_appointment
+          - description
+          - user_id
+          - doctor_id
+      security:
+      - Authorization: {}
+      responses:
+        '200':
+          description: successful
+    put:
+      summary: update appointment
+      parameters:
+      - in: header
+        type: string
+        name: Authorization
+        required: true
+        description: Client token
+      - name: appointment
+        in: body
+        schema:
+          type: object
+          properties:
+            date_of_appointment:
+              type: string
+            time_of_appointment:
+              type: string
+            description:
+              type: string
+            user_id:
+              type: string
+            doctor_id:
+              type: string
+          required:
+          - date_of_appointment
+          - time_of_appointment
+          - description
+          - user_id
+          - doctor_id
+      security:
+      - Authorization: {}
+      responses:
+        '200':
+          description: successful
+    delete:
+      summary: delete appointment
+      parameters:
+      - in: header
+        type: string
+        name: Authorization
+        required: true
+        description: Client token
+      security:
+      - Authorization: {}
+      responses:
+        '200':
+          description: successful
   "/api/v1/doctors":
     get:
       summary: list doctors

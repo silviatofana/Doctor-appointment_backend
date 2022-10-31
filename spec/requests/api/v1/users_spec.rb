@@ -184,4 +184,30 @@ RSpec.describe 'api/v1/users', type: :request do
       end
     end
   end
+
+  path '/api/v1/patient/appointments' do
+    get('users appointments') do
+      parameter({
+      in: :header,
+      type: :string,
+      name: :Authorization,
+      required: true,
+      description: 'Client token'
+    })
+
+      response(200, 'successful') do
+        security [Authorization: {}]
+        let(:Authorization) { "Authorization #{generate_token}" }
+
+        after do |example|
+          example.metadata[:response][:content] = {
+            'application/json' => {
+              example: JSON.parse(response.body, symbolize_names: true)
+            }
+          }
+        end
+        run_test!
+      end
+    end
+  end
 end

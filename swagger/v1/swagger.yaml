@@ -285,6 +285,8 @@ paths:
               type: string
             email:
               type: string
+            role:
+              type: string
             password:
               type: string
             password_confirmation:
@@ -293,7 +295,8 @@ paths:
           - name
           - email
           - password
-          - password_confirmation
+          - password_confirmation,
+          - role
       responses:
         '200':
           description: successful
@@ -323,6 +326,8 @@ paths:
               type: string
             email:
               type: string
+            role:
+              type: string
             password:
               type: string
             password_confirmation:
@@ -331,7 +336,8 @@ paths:
           - name
           - email
           - password
-          - password_confirmation
+          - password_confirmation,
+          - role
       responses:
         '200':
           description: successful
@@ -349,6 +355,8 @@ paths:
               type: string
             email:
               type: string
+            role:
+              type: string
             password:
               type: string
             password_confirmation:
@@ -357,7 +365,8 @@ paths:
           - name
           - email
           - password
-          - password_confirmation
+          - password_confirmation,
+          - role
       responses:
         '200':
           description: successful
@@ -381,6 +390,8 @@ paths:
               type: string
             email:
               type: string
+            role:
+              type: string
             password:
               type: string
             password_confirmation:
@@ -389,7 +400,8 @@ paths:
           - name
           - email
           - password
-          - password_confirmation
+          - password_confirmation,
+          - role
       responses:
         '200':
           description: successful

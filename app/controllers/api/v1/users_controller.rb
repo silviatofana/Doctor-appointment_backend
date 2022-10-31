@@ -1,5 +1,6 @@
 class Api::V1::UsersController < ApplicationController
   before_action :set_user, only: %i[show update destroy]
+  before_action :authorize_request, only: %i[appointments]
 
   # GET /users
   def index
@@ -38,6 +39,12 @@ class Api::V1::UsersController < ApplicationController
     @user.destroy
     @users = User.all
     render json: @users
+  end
+
+ # GET /users/1/appointments
+  def appointments 
+    @appointments = current_user.appointments
+    render json: @appointments
   end
 
   private

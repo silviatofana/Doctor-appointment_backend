@@ -24,10 +24,11 @@ RSpec.describe 'api/v1/users', type: :request do
           properties: {
             name: { type: :string },
             email: { type: :string },
+            role: { type: :string },
             password: { type: :string },
             password_confirmation: { type: :string }
           },
-          required: %w[name email password password_confirmation]
+          required: %w[name email password password_confirmation, role]
         }
 
         after do |example|
@@ -71,10 +72,11 @@ RSpec.describe 'api/v1/users', type: :request do
           properties: {
             name: { type: :string },
             email: { type: :string },
+            role: { type: :string },
             password: { type: :string },
             password_confirmation: { type: :string }
           },
-          required: %w[name email password password_confirmation]
+          required: %w[name email password password_confirmation, role]
         }
 
         after do |example|
@@ -98,10 +100,11 @@ RSpec.describe 'api/v1/users', type: :request do
           properties: {
             name: { type: :string },
             email: { type: :string },
+            role: { type: :string },
             password: { type: :string },
             password_confirmation: { type: :string }
           },
-          required: %w[name email password password_confirmation]
+          required: %w[name email password password_confirmation, role]
         }
 
         after do |example|
@@ -141,10 +144,11 @@ RSpec.describe 'api/v1/users', type: :request do
           properties: {
             name: { type: :string },
             email: { type: :string },
+            role: { type: :string },
             password: { type: :string },
             password_confirmation: { type: :string }
           },
-          required: %w[name email password password_confirmation]
+          required: %w[name email password password_confirmation, role]
         }
 
         after do |example|

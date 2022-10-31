@@ -28,7 +28,7 @@ RSpec.describe 'api/v1/users', type: :request do
             password: { type: :string },
             password_confirmation: { type: :string }
           },
-          required: %w[name email password password_confirmation, role]
+          required: %w[name email password password_confirmation role]
         }
 
         after do |example|
@@ -76,7 +76,7 @@ RSpec.describe 'api/v1/users', type: :request do
             password: { type: :string },
             password_confirmation: { type: :string }
           },
-          required: %w[name email password password_confirmation, role]
+          required: %w[name email password password_confirmation role]
         }
 
         after do |example|
@@ -104,7 +104,7 @@ RSpec.describe 'api/v1/users', type: :request do
             password: { type: :string },
             password_confirmation: { type: :string }
           },
-          required: %w[name email password password_confirmation, role]
+          required: %w[name email password password_confirmation role]
         }
 
         after do |example|
@@ -148,7 +148,7 @@ RSpec.describe 'api/v1/users', type: :request do
             password: { type: :string },
             password_confirmation: { type: :string }
           },
-          required: %w[name email password password_confirmation, role]
+          required: %w[name email password password_confirmation role]
         }
 
         after do |example|

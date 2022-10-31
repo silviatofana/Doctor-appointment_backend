@@ -41,8 +41,8 @@ class Api::V1::UsersController < ApplicationController
     render json: @users
   end
 
- # GET /users/1/appointments
-  def appointments 
+  # GET /users/1/appointments
+  def appointments
     @appointments = current_user.appointments
     render json: @appointments
   end

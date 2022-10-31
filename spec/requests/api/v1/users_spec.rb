@@ -188,12 +188,12 @@ RSpec.describe 'api/v1/users', type: :request do
   path '/api/v1/patient/appointments' do
     get('users appointments') do
       parameter({
-      in: :header,
-      type: :string,
-      name: :Authorization,
-      required: true,
-      description: 'Client token'
-    })
+                  in: :header,
+                  type: :string,
+                  name: :Authorization,
+                  required: true,
+                  description: 'Client token'
+                })
 
       response(200, 'successful') do
         security [Authorization: {}]

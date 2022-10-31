@@ -3,7 +3,8 @@ require 'rails_helper'
 RSpec.describe 'Appointments', type: %w[request feature] do
   before do
     post '/api/v1/users',
-         params: { name: 'Solo Boss', password: '123456', password_confirmation: '123456', email: 'boss@gmail.com', role: 'admin' }
+         params: { name: 'Solo Boss', password: '123456', password_confirmation: '123456', email: 'boss@gmail.com',
+                   role: 'admin' }
     @user = User.all.last
 
     post '/auth/login', params: { email: @user.email, password: '123456' }

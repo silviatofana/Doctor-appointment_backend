@@ -3,7 +3,7 @@ require 'rails_helper'
 RSpec.describe Appointment, type: :model do
   subject do
     user = User.create(name: 'Solo Boss', password: '123456', email: 'soloboss@gmail.com', role: 'admin')
-    doctor = Doctor.create(name: 'Silvia', picture: 'https://icon.com/icon.jpg', specialization: 'Cardiologist')
+    doctor = Doctor.create(name: 'Silvia', picture: 'https://icon.com/icon.jpg', specialization: 'Cardiologist', gender: 'F')
     Appointment.new(description: 'head ache', user:, doctor:, date_of_appointment: '2021-01-01',
                     time_of_appointment: '10:00')
   end

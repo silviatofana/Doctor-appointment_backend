@@ -7,3 +7,8 @@
 #   Character.create(name: "Luke", movie: movies.first)
 
 User.create(name: "Dr. Johnie Carson", email: 'jcarson@gmail.com', password: '123456', password_confirmation: '123456', role: 'admin')
+
+Doctor.create(name: "Dr. Andrew Bile", specialization: 'Oncologist', picture: 'dr_andrew_bile.png')
+Doctor.create(name: "Dr. Anne Zawadi", specialization: 'Cardiologist', picture: 'dr_anne_zawadi.png')
+Doctor.create(name: "Dr. Mark Xaverian", specialization: 'Surgeon', picture: 'dr_mark_x.png')
+Doctor.create(name: "Dr. Rawal Parag", specialization: 'Oncologist', picture: 'dr_rawal_parag.png')

@@ -3,7 +3,7 @@ require 'rails_helper'
 RSpec.describe Doctor, type: :model do
   subject do
     user = User.create(name: 'Solo Boss', password: '123456', email: 'soloboss@gmail.com', role: 'admin')
-    Doctor.new(name: 'Silvia', picture: 'https://icon.com/icon.jpg', specialization: 'Cardiologist')
+    Doctor.new(name: 'Silvia', picture: 'https://icon.com/icon.jpg', specialization: 'Cardiologist', gender: 'F')
   end
 
   before { subject.save }

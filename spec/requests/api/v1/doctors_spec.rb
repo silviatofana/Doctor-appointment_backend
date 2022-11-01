@@ -34,9 +34,10 @@ RSpec.describe 'api/v1/doctors', type: :request do
           properties: {
             name: { type: :string },
             specialization: { type: :string },
-            picture: { type: :string }
+            picture: { type: :string },
+            gender: { type: :string }
           },
-          required: %w[name specialization picture]
+          required: %w[name specialization picture gender]
         }
 
         after do |example|
@@ -88,9 +89,10 @@ RSpec.describe 'api/v1/doctors', type: :request do
           properties: {
             name: { type: :string },
             specialization: { type: :string },
-            picture: { type: :string }
+            picture: { type: :string },
+            gender: { type: :string }
           },
-          required: %w[name specialization picture]
+          required: %w[name specialization picture gender]
         }
 
         after do |example|
@@ -121,9 +123,10 @@ RSpec.describe 'api/v1/doctors', type: :request do
           properties: {
             name: { type: :string },
             specialization: { type: :string },
-            picture: { type: :string }
+            picture: { type: :string },
+            gender: { type: :string }
           },
-          required: %w[name specialization picture]
+          required: %w[name specialization picture gender]
         }
 
         after do |example|

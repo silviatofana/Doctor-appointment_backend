@@ -11,7 +11,7 @@ RSpec.describe 'Doctors', type: %w[request feature] do
     @token = JSON.parse(response.body)['token']
 
     post '/api/v1/doctors',
-         params: { doctor: { name: 'Solo Boss', specialization: 'Oncologist', picture: 'http://localhost/pic.png' } },
+         params: { doctor: { name: 'Solo Boss', specialization: 'Oncologist', picture: 'http://localhost/pic.png', gender: 'M' } },
          headers: { Authorization: @token }
 
     @doctor = Doctor.all.last

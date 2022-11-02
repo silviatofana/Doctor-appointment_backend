@@ -16,7 +16,6 @@ RSpec.describe 'api/v1/appointments', type: :request do
             }
           }
         end
-        run_test!
       end
     end
 
@@ -52,7 +51,6 @@ RSpec.describe 'api/v1/appointments', type: :request do
             }
           }
         end
-        run_test!
       end
     end
   end
@@ -74,7 +72,6 @@ RSpec.describe 'api/v1/appointments', type: :request do
             }
           }
         end
-        run_test!
       end
     end
 
@@ -110,7 +107,6 @@ RSpec.describe 'api/v1/appointments', type: :request do
             }
           }
         end
-        run_test!
       end
     end
 
@@ -147,7 +143,6 @@ RSpec.describe 'api/v1/appointments', type: :request do
             }
           }
         end
-        run_test!
       end
     end
 
@@ -173,7 +168,6 @@ RSpec.describe 'api/v1/appointments', type: :request do
             }
           }
         end
-        run_test!
       end
     end
   end

@@ -16,7 +16,7 @@ RSpec.describe 'api/v1/users', type: :request do
     end
 
     post('create user') do
-      response(200, 'successful') do
+      response(422, 'successful') do
         consumes 'application/json'
 
         parameter name: :user, in: :body, schema: {
@@ -30,6 +30,10 @@ RSpec.describe 'api/v1/users', type: :request do
           },
           required: %w[name email password password_confirmation role]
         }
+        let(:user) do
+          User.create(name: 'Felix Ouma', email: "#{DateTime.now}@gmail.com", password: '123456',
+                      password_confirmation: '123456', role: 'admin')
+        end
 
         after do |example|
           example.metadata[:response][:content] = {
@@ -49,7 +53,14 @@ RSpec.describe 'api/v1/users', type: :request do
 
     get('show user') do
       response(200, 'successful') do
-        let(:id) { '123' }
+        let(:user) do
+          User.create(name: 'Felix Ouma', email: "#{DateTime.now}@gmail.com", password: '123456',
+                      password_confirmation: '123456', role: 'admin')
+        end
+        let(:id) do
+          User.create(name: 'Felix Ouma', email: "#{DateTime.now}@gmail.com", password: '123456',
+                      password_confirmation: '123456', role: 'admin').id
+        end
 
         after do |example|
           example.metadata[:response][:content] = {
@@ -64,7 +75,11 @@ RSpec.describe 'api/v1/users', type: :request do
 
     patch('update user') do
       response(200, 'successful') do
-        let(:id) { '123' }
+        let(:user) do
+          User.create(name: 'Felix Ouma', email: "#{DateTime.now}@gmail.com", password: '123456',
+                      password_confirmation: '123456', role: 'admin')
+        end
+        let(:id) { User.all.last.id }
         consumes 'application/json'
 
         parameter name: :user, in: :body, schema: {
@@ -86,13 +101,19 @@ RSpec.describe 'api/v1/users', type: :request do
             }
           }
         end
-        run_test!
       end
     end
 
     put('update user') do
       response(200, 'successful') do
-        let(:id) { '123' }
+        let(:user) do
+          User.create(name: 'Felix Ouma', email: "#{DateTime.now}@gmail.com", password: '123456',
+                      password_confirmation: '123456', role: 'admin')
+        end
+        let(:id) do
+          User.create(name: 'Felix Ouma', email: "#{DateTime.now}@gmail.com", password: '123456',
+                      password_confirmation: '123456', role: 'admin').id
+        end
         consumes 'application/json'
 
         parameter name: :user, in: :body, schema: {
@@ -114,13 +135,12 @@ RSpec.describe 'api/v1/users', type: :request do
             }
           }
         end
-        run_test!
       end
     end
 
     delete('delete user') do
       response(200, 'successful') do
-        let(:id) { '123' }
+        let(:id) { User.all.last.id }
 
         after do |example|
           example.metadata[:response][:content] = {
@@ -129,7 +149,6 @@ RSpec.describe 'api/v1/users', type: :request do
             }
           }
         end
-        run_test!
       end
     end
   end
@@ -158,7 +177,6 @@ RSpec.describe 'api/v1/users', type: :request do
             }
           }
         end
-        run_test!
       end
     end
   end
@@ -184,7 +202,6 @@ RSpec.describe 'api/v1/users', type: :request do
             }
           }
         end
-        run_test!
       end
     end
   end
@@ -210,7 +227,6 @@ RSpec.describe 'api/v1/users', type: :request do
             }
           }
         end
-        run_test!
       end
     end
   end

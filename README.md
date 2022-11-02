@@ -2,7 +2,7 @@
 
 # Doctors Appointment Backend
 
-> This web application is the API that serves as the backend to the [Hello-react-front-end](https://github.com/Chrissiku/hello-react-front-end.git)
+> This web application is the API that serves as the backend to the [Doctor-appointment_frontend](https://github.com/Theophileaseh/Doctor-appointment_frontend)
 
 ## Front-end Repository
 | Repository | Pull request |

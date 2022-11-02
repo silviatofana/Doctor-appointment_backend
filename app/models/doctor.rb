@@ -7,9 +7,9 @@ class Doctor < ApplicationRecord
 
   def default_values
     self.picture = if gender == 'M' || gender == 'Male'
-                     'male-placeholder.png'
+                     'https://backendfinalcapstone.herokuapp.com/images/male-placeholder.png'
                    else
-                     'female-placeholder.png'
+                     'https://backendfinalcapstone.herokuapp.com/images/female-placeholder.png'
                    end
     picture
   end

@@ -30,7 +30,10 @@ RSpec.describe 'api/v1/users', type: :request do
           },
           required: %w[name email password password_confirmation role]
         }
-        let(:user) { User.create(name: 'Felix Ouma', email: "#{DateTime.now}@gmail.com", password: '123456', password_confirmation: '123456', role: 'admin') }
+        let(:user) do
+          User.create(name: 'Felix Ouma', email: "#{DateTime.now}@gmail.com", password: '123456',
+                      password_confirmation: '123456', role: 'admin')
+        end
 
         after do |example|
           example.metadata[:response][:content] = {
@@ -50,8 +53,14 @@ RSpec.describe 'api/v1/users', type: :request do
 
     get('show user') do
       response(200, 'successful') do
-        let(:user) { User.create(name: 'Felix Ouma', email: "#{DateTime.now}@gmail.com", password: '123456', password_confirmation: '123456', role: 'admin') }
-        let(:id) { User.create(name: 'Felix Ouma', email: "#{DateTime.now}@gmail.com", password: '123456', password_confirmation: '123456', role: 'admin').id }
+        let(:user) do
+          User.create(name: 'Felix Ouma', email: "#{DateTime.now}@gmail.com", password: '123456',
+                      password_confirmation: '123456', role: 'admin')
+        end
+        let(:id) do
+          User.create(name: 'Felix Ouma', email: "#{DateTime.now}@gmail.com", password: '123456',
+                      password_confirmation: '123456', role: 'admin').id
+        end
 
         after do |example|
           example.metadata[:response][:content] = {
@@ -66,7 +75,10 @@ RSpec.describe 'api/v1/users', type: :request do
 
     patch('update user') do
       response(200, 'successful') do
-        let(:user) { User.create(name: 'Felix Ouma', email: "#{DateTime.now}@gmail.com", password: '123456', password_confirmation: '123456', role: 'admin') }
+        let(:user) do
+          User.create(name: 'Felix Ouma', email: "#{DateTime.now}@gmail.com", password: '123456',
+                      password_confirmation: '123456', role: 'admin')
+        end
         let(:id) { User.all.last.id }
         consumes 'application/json'
 
@@ -94,8 +106,14 @@ RSpec.describe 'api/v1/users', type: :request do
 
     put('update user') do
       response(200, 'successful') do
-        let(:user) { User.create(name: 'Felix Ouma', email: "#{DateTime.now}@gmail.com", password: '123456', password_confirmation: '123456', role: 'admin') }
-        let(:id) { User.create(name: 'Felix Ouma', email: "#{DateTime.now}@gmail.com", password: '123456', password_confirmation: '123456', role: 'admin').id }
+        let(:user) do
+          User.create(name: 'Felix Ouma', email: "#{DateTime.now}@gmail.com", password: '123456',
+                      password_confirmation: '123456', role: 'admin')
+        end
+        let(:id) do
+          User.create(name: 'Felix Ouma', email: "#{DateTime.now}@gmail.com", password: '123456',
+                      password_confirmation: '123456', role: 'admin').id
+        end
         consumes 'application/json'
 
         parameter name: :user, in: :body, schema: {

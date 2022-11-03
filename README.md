@@ -22,6 +22,17 @@
 https://backendfinalcapstone.herokuapp.com/api-docs/index.html
 
 
+## Kanban Board
+[Final capstone project kanban board >>](https://github.com/users/silviatofana/projects/6)
+
+## Initial Kanban Board Screenshot
+[Screenshot One >>](https://user-images.githubusercontent.com/16392046/196729267-55d632f6-2314-4728-ae10-cf5a7667e5a1.png)
+
+[Screenshot Two >>](https://user-images.githubusercontent.com/16392046/196729665-e986f2a6-c948-45c2-81e2-62da32c6b172.png)
+
+## Final number of teammates
+> We are a team of four namely Silvia Tofana, Basit Korede, Nwachan Theophile and Felix Ouma
+
 
 ## Getting Started
 To get a local copy up and running follow these simple example steps.
@@ -80,6 +91,17 @@ rspec
 - GitHub: [@Felix45](https://github.com/Felix45)
 - Twitter: [@Felix_Atonoh](https://twitter.com/Felix_Atonoh)
 - LinkedIn: [LinkedIn](https://www.linkedin.com/in/felix-ouma/)
+
+👤 **NWACHAN THEOPHILE**
+- GitHub: [@Theophileaseh](https://github.com/Theophileaseh)
+- Twitter: [@twitterhandle](https://twitter.com/twitterhandle)
+- LinkedIn: [Nwachan Theophile](https://www.linkedin.com/in/nwachan-theophile/)
+
+
+👤 **BASIT KOREDE**
+- GitHub: [@BasitKorede](https://github.com/BasitKorede)
+- Twitter: [@twitterhandle](https://twitter.com/twitterhandle)
+- LinkedIn: [Basit Korede](https://www.linkedin.com/in/basit-korede/)
 
 
 ## 🤝 Contributing

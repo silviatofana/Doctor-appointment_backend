@@ -81,6 +81,17 @@ rspec
 - Twitter: [@Felix_Atonoh](https://twitter.com/Felix_Atonoh)
 - LinkedIn: [LinkedIn](https://www.linkedin.com/in/felix-ouma/)
 
+👤 **NWACHAN THEOPHILE**
+- GitHub: [@Theophileaseh](https://github.com/Theophileaseh)
+- Twitter: [@twitterhandle](https://twitter.com/twitterhandle)
+- LinkedIn: [Nwachan Theophile](https://www.linkedin.com/in/nwachan-theophile/)
+
+
+👤 **BASIT KOREDE**
+- GitHub: [@BasitKorede](https://github.com/BasitKorede)
+- Twitter: [@twitterhandle](https://twitter.com/twitterhandle)
+- LinkedIn: [Basit Korede](https://www.linkedin.com/in/basit-korede/)
+
 
 ## 🤝 Contributing
 
